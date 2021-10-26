@@ -23,7 +23,7 @@ module.exports = {
     },
   },
   rules: {
-    'comma-dangle': ['error', 'never'],
+    'comma-dangle': ['error', 'always-multiline'],
     'import/prefer-default-export': 0,
     'import/no-extraneous-dependencies': [
       'error',
