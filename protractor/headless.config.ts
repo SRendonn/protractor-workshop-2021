@@ -9,4 +9,10 @@ export const config: Config = {
     reporter();
     browser.ignoreSynchronization = true;
   },
+  capabilities: {
+    browserName: 'chrome',
+    chromeOptions: {
+      args: ['--headless', '--disable-gpu'],
+    },
+  },
 };
