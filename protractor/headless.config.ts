@@ -14,4 +14,10 @@ export const config: Config = {
     browser.ignoreSynchronization = true;
     browser.manage().timeouts().implicitlyWait(3000);
   },
+  capabilities: {
+    browserName: 'chrome',
+    chromeOptions: {
+      args: ['--headless', '--disable-gpu'],
+    },
+  },
 };
