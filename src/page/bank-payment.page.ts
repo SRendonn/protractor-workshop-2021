@@ -7,7 +7,7 @@ export class BankPaymentPage {
     this.confirmOrderButton = $('#cart_navigation > button > span');
   }
 
-  public confirmOrder() {
+  public async confirmOrder() {
     this.confirmOrderButton.click();
   }
 }

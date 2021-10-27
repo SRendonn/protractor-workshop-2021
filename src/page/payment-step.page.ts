@@ -7,7 +7,7 @@ export class PaymentStepPage {
     this.bankPaymentButton = $('#HOOK_PAYMENT > div:nth-child(1) > div > p > a');
   }
 
-  public goToBankPayment() {
+  public async goToBankPayment() {
     this.bankPaymentButton.click();
   }
 }
