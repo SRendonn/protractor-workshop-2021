@@ -158,8 +158,9 @@ dist
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,visualstudiocode,node
-<<<<<<< refs/remotes/origin/main
-=======
+
 # Typescript
 dist
->>>>>>> setup protractor configuration
+
+# Awesome Jasmine Report
+reports
