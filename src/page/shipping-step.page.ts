@@ -5,9 +5,18 @@ export class ShippingStepPage {
 
   private checkoutButton: ElementFinder;
 
+  public get getTermsOfServiceCheckbox(): ElementFinder {
+    return this.termsOfServiceCheckbox;
+  }
+
+  public get getCheckoutButton(): ElementFinder {
+    return this.checkoutButton;
+  }
+
   constructor() {
     this.termsOfServiceCheckbox = $('#cgv');
-    this.checkoutButton = $('#form > p > button > span');
+    // ? CHANGED SELECTOR: removed unnecesary selectors
+    this.checkoutButton = $('button.standard-checkout');
   }
 
   public async acceptTermsOfService() {

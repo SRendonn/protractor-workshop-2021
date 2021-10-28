@@ -10,7 +10,8 @@ export class SignInStepPage {
   constructor() {
     this.emailInput = $('#email');
     this.passwordInput = $('#passwd');
-    this.signInButton = $('#SubmitLogin > span');
+    // ? CHANGED CSS SELECTOR: REMOVED UNNECESARY SELECTOR span
+    this.signInButton = $('#SubmitLogin');
   }
 
   public async enterEmail(value: string): Promise<void> {
