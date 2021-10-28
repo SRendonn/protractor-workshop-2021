@@ -13,10 +13,6 @@ import {
 } from '../src/page';
 
 describe('Buy a t-shirt', () => {
-  const paymentStepPage = new PaymentStepPage();
-  const bankPaymentPage = new BankPaymentPage();
-  const orderSummaryPage = new OrderSummaryPage();
-
   const ec = ExpectedConditions;
 
   describe('given an online shop', () => {
@@ -64,6 +60,10 @@ describe('Buy a t-shirt', () => {
 
           describe('should pay via bank wire', () => {
             it('then should be bought a t-shirt', async () => {
+              const paymentStepPage = new PaymentStepPage();
+              const bankPaymentPage = new BankPaymentPage();
+              const orderSummaryPage = new OrderSummaryPage();
+
               await browser.wait(ec.elementToBeClickable(paymentStepPage.getBankPaymentButton),
                 5000);
               await paymentStepPage.goToBankPayment();
