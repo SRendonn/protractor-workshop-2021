@@ -1,11 +1,11 @@
-const { AwesomeReport } = require('jasmine-awesome-report');
-
-const config = {
-  fullPath: 'awesome-report',
-  fileName: 'report',
-  merge: true,
-};
+import { SpecReporter, StacktraceOption } from 'jasmine-spec-reporter';
 
 export const reporter = () => {
-  jasmine.getEnv().addReporter(AwesomeReport.getReport(config));
+  jasmine.getEnv().addReporter(
+    new SpecReporter({
+      spec: {
+        displayStacktrace: StacktraceOption.PRETTY,
+      },
+    }),
+  );
 };
