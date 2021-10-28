@@ -3,8 +3,13 @@ import { $, ElementFinder } from 'protractor';
 export class SummaryStepPage {
   private checkoutButton: ElementFinder;
 
+  public get getCheckoutButton(): ElementFinder {
+    return this.checkoutButton;
+  }
+
   constructor() {
-    this.checkoutButton = $('.cart_navigation span');
+    // ? CHANGED SELECTOR: SPECIFY CLASS .standard-checkout
+    this.checkoutButton = $('a.standard-checkout');
   }
 
   public async goToSignInStepPage(): Promise<void> {

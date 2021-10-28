@@ -3,8 +3,14 @@ import { $, ElementFinder } from 'protractor';
 export class ProductListPage {
   private addToCartButton: ElementFinder;
 
+  public get getAddToCartButton(): ElementFinder {
+    return this.addToCartButton;
+  }
+
   constructor() {
-    this.addToCartButton = $('#center_column a.button.ajax_add_to_cart_button.btn.btn-default');
+    // ? CHANGED SELECTOR: SPECICY TO CLICK THE CART BUTTON OF THE FIRST ELEMENT
+    // ? IN THE GRID, AS IT IS A PRODUCT LIST, REMOVED REDUNDANT CLASSES.
+    this.addToCartButton = $('li:first-child a.ajax_add_to_cart_button');
   }
 
   public async addToCart(): Promise<void> {
